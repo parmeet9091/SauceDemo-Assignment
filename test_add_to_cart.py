@@ -12,5 +12,6 @@ def test_add_to_cart():
     driver.find_element(By.ID, "login-button").click()
     driver.find_element(By.CSS_SELECTOR, "button.btn_primary.btn_inventory").click()
     badge = driver.find_element(By.CSS_SELECTOR, "a.shopping_cart_link").text
+    time.sleep(1)
     assert badge == "1"
     driver.quit()
